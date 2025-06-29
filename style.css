@@ -1,0 +1,182 @@
+/* RESET & BASE */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* CONTAINER */
+.main-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CARD LAYOUT */
+.card-container {
+  display: flex;
+  width: 900px;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* FORM SECTION */
+.form-section {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.form-section h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1f2d3d;
+}
+
+.form-section form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #dbe1e8;
+  border-radius: 8px;
+  background: #f9fafc;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.form-section form input:focus {
+  border-color: #7c2ae8;
+  box-shadow: 0 0 0 3px rgba(124, 42, 232, 0.2);
+  outline: none;
+  background: #fff;
+}
+
+/* BUTTONS */
+.primary-btn, .secondary-btn {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #7c2ae8, #9d50ff);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 42, 232, 0.3);
+}
+
+.secondary-btn {
+  background: linear-gradient(135deg, #e74c3c, #ff7675);
+  color: #fff;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.button-group .primary-btn,
+.button-group .secondary-btn {
+  flex: 1 1 calc(50% - 8px);
+}
+
+/* TRANSACTION BOX */
+.transaction-box {
+  margin-top: 30px;
+  background: #fff;
+  border: 1px solid #e0e5eb;
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 180px;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.transaction-box h2 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #e0e5eb;
+  padding-bottom: 8px;
+}
+
+.transaction-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.transaction-box li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 14px;
+  color: #555;
+}
+
+.transaction-box li:last-child {
+  border-bottom: none;
+}
+
+/* IMAGE SECTION */
+.image-section {
+  flex: 1;
+  background: url('./assets/atm.avif') ;
+  background-size: cover;
+  position: relative;
+}
+
+.image-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-section {
+    height: 200px;
+  }
+
+  .form-section {
+    padding: 40px 30px;
+  }
+
+  .button-group .primary-btn,
+  .button-group .secondary-btn {
+    flex: 1 1 100%;
+  }
+}

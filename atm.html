@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATM Simulator</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <div class="card-container">
+      <section class="form-section">
+        <h1>ATM Simulator</h1>
+        <form>
+          <input type="number" id="amount" name="amount" placeholder="Enter Amount" />
+          <div class="button-group">
+            <button type="button" class="primary-btn">Deposit</button>
+            <button type="button" class="primary-btn">Withdraw</button>
+            <button type="button" class="primary-btn">Check Balance</button>
+            <button type="button" class="secondary-btn">Exit</button>
+          </div>
+        </form>
+
+        <div class="transaction-box">
+          <h2>Transaction History</h2>
+          <ul id="history-list"></ul>
+        </div>
+      </section>
+      <section class="image-section"></section>
+    </div>
+  </div>
+</body>
+</html>
