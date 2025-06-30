@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - ATM Simulator</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-  <div class="main-container">
-    <div class="card-container">
-      <section class="form-section">
-        <h1>Login</h1>
-        <form>
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
-          <input type="password" id="password" name="password" placeholder="Your Password" required />
-          <button type="submit" class="primary-btn">Log In</button>
-        </form>
-      </section>
-      <section class="image-section"></section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - ATM Simulator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="card-container">
+        <section class="form-section">
+          <h1>Login</h1>
+          <form id="loginForm">
+            <input
+              type="text"
+              id="userName"
+              name="userName"
+              placeholder=" Enter Your Name"
+            />
+            <p id="usernameError" style="color: red"></p>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Your Password"
+            />
+            <p id="passwordError" style="color: red"></p>
+            <button type="submit" class="primary-btn">Log In</button>
+          </form>
+        </section>
+        <section class="image-section"></section>
+      </div>
     </div>
-  </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>
